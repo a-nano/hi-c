@@ -14,6 +14,7 @@
 	 ,@enum-list)
      ;; Export enum name
      (export ',name)
+     #|
      ;; Export each enum value
      (export
       ',(mapcar
@@ -25,6 +26,7 @@
 	 (if (typep (car enum-list) 'string)
 	     (cdr enum-list)
 	     enum-list)))
+     |#
       ;; Return name of enum
       ',name))
 
